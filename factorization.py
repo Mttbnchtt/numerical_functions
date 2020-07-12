@@ -33,5 +33,6 @@ def factorization(n):
     # handle error if input is not an integer
         print("Input error: must be integer.")
 
-inp = input("Number: ")
-print(factorization(inp))
+# uncomment to try with a specific number
+# inp = input("Number: ")
+# print(factorization(inp))
