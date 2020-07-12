@@ -1,7 +1,7 @@
 # find the prime factorization and the prime factors of a number
 import re
 
-def factorization(n):
+def prime_factorization(n):
     # create a dictionary to store the information
     dct = {}
     dct["factorization"] = ""
@@ -35,4 +35,4 @@ def factorization(n):
 
 # uncomment to try with a specific number
 # inp = input("Number: ")
-# print(factorization(inp))
+# print(prime_factorization(inp))
