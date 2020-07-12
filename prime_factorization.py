@@ -7,9 +7,10 @@ def prime_factorization(n):
         n = int(n)
         if n > 1 :
     # create a dictionary to store the information
-            dct = {}
-            dct["factorization"] = ""
-            dct["factors"] = [1]
+            dct = {
+                "factorization" : "",
+                "factors" : [1]
+            }
     # find the square root of n
             q = math.sqrt(n)
     # check if a prime divides n
