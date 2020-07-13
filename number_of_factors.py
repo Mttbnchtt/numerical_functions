@@ -2,7 +2,7 @@ def number_of_factors(n):
     try:
         n = int(n)
         if n > 0:
-    #     find prime factors and determine their coefficients
+#     find prime factors and determine their coefficients
             prime_factors = [1]
             q = math.sqrt(n)
             while n % 2 == 0:
@@ -15,9 +15,9 @@ def number_of_factors(n):
                         n = n // i
                         break
             prime_factors.remove(1)
-    # the factors of n are the products of prime factors with coefficients between 0 
-    # and the coefficients that they have in the prime decomposition of n
-    # therefore, the number of factors of n is the products of the cardinality of the ranges of the powerss
+# the factors of n are the products of prime factors with coefficients between 0 
+# and the coefficients that they have in the prime decomposition of n
+# therefore, the number of factors of n is the products of the cardinality of the ranges of the powerss
             m = 1
             for i in list(set(prime_factors)):
                 m = m * (prime_factors.count(i)+1)
