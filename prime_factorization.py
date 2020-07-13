@@ -11,19 +11,22 @@ def prime_factorization(n):
                 "factorization" : "",
                 "factors" : [1]
             }
+    # find the square root of n
+            q = math.sqrt(n)
     # check if a prime divides n
         # if n is even, find the power of 2
             while n % 2 == 0:
                 dct["factors"].append(2)
                 n = n // 2
         # check the remaining odd factors
-        # use sqrt(n) as an upper bound because only prime numbers
+        # use q as an upper bound because only prime numbers
         # have a prime factor greater than their square roots
-            for i in range(3, int(math.sqrt(n)+1), 2):
-                if n % i == 0:
-                    dct["factors"].append(i)
-                    n = n // i
-                    break
+            while n > 1 and max(dct["factors"]) <= q:
+                for i in range(3, n+1, 2):
+                    if n % i == 0:
+                        dct["factors"].append(i)
+                        n = n // i
+                        break
         # check if n is prime
             if len(dct["factors"]) == 1:
                 dct["factors"] == [n]
